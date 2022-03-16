@@ -35,7 +35,23 @@ class ListViewController: UIViewController {
 		
 	}
 	
-
+	
+	func loadAll() {
+		if creatures.urlString.hasPrefix("http") {
+			creatures.getData {
+				DispatchQueue.main.async {
+					self.navigationItem.title = "\(self.creatures.creatureArray.count) of \(self.creatures.count) Pokemon"
+					self.tableView.reloadData()
+				}
+				self.loadAll()
+			}
+		}
+	}
+	
+	
+	@IBAction func loadAllButtonPressed(_ sender: UIBarButtonItem) {
+		loadAll()
+	}
 }
 
 
@@ -54,6 +70,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 		if indexPath.row == creatures.creatureArray.count - 1 &&  creatures.urlString.hasPrefix("http"){
 			creatures.getData {
 				DispatchQueue.main.async {
+					self.navigationItem.title = "\(self.creatures.creatureArray.count) of \(self.creatures.count) Pokemon"
 					self.tableView.reloadData()
 				}
 			}
