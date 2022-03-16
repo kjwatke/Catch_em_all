@@ -1,28 +1,35 @@
 //
-//  Creatures.swift
+//  CreatureDetail.swift
 //  Catch 'em All
 //
-//  Created by Kevin Watke on 3/14/22.
+//  Created by Kevin Watke on 3/15/22.
 //
 
 import Foundation
 
-
-class Creatures {
+class CreatureDetail {
 	
 	private struct Returned: Codable {
-		var count: Int
-		var next: String?
-		var results: [Creature]
+		var height: Double
+		var weight: Double
+		var sprites: Sprites
 	}
 	
-	var count = 0
-	var urlString = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
-	var creatureArray: [Creature] = []
+	
+	private struct Sprites: Codable {
+		var front_default: String
+	}
+	
+	
+	var height = 0.0
+	var weight = 0.0
+	var imageURL = ""
+	var urlString = ""
 	
 	
 	func getData(completed: @escaping () -> () ) {
-		print("Accessing URL: \(urlString)")
+		print("We are accessing url: \(urlString)")
+		
 		guard let url = URL(string: urlString) else { return }
 		
 		let session = URLSession.shared
@@ -35,11 +42,11 @@ class Creatures {
 			do {
 				let returned = try JSONDecoder().decode(Returned.self, from: data!)
 				print("Returned: \(returned)")
-				self.creatureArray += returned.results
-				self.urlString = returned.next ?? ""
-				self.count = returned.count
+				self.height = returned.height
+				self.weight = returned.weight
+				self.imageURL = returned.sprites.front_default
 			} catch  {
-				print("Error creating the data: \(error)")
+				print("Error creating data: \(error)")
 			}
 			completed()
 		}

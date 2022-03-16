@@ -44,6 +44,13 @@ class ListViewController: UIViewController {
 	}
 	
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let destination = segue.destination as! DetailViewController
+		let selectedIndexPath = tableView.indexPathForSelectedRow!
+		destination.creature = creatures.creatureArray[selectedIndexPath.row]
+	}
+	
+	
 	func setupActivityIndicator() {
 		activityIndicatior.center = self.view.center
 		activityIndicatior.hidesWhenStopped = true

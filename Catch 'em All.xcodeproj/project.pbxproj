@@ -14,6 +14,9 @@
 		0AF1C77C27DF7CA500DB4A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1C77B27DF7CA500DB4A27 /* Assets.xcassets */; };
 		0AF1C77F27DF7CA500DB4A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1C77D27DF7CA500DB4A27 /* LaunchScreen.storyboard */; };
 		0AF1C78727E02E9C00DB4A27 /* Creatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1C78627E02E9C00DB4A27 /* Creatures.swift */; };
+		0AF1C7AB27E18A1000DB4A27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1C7AA27E18A1000DB4A27 /* DetailViewController.swift */; };
+		0AF1C7AD27E18E2A00DB4A27 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1C7AC27E18E2A00DB4A27 /* Creature.swift */; };
+		0AF1C7AF27E18F3B00DB4A27 /* CreatureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1C7AE27E18F3B00DB4A27 /* CreatureDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		0AF1C77E27DF7CA500DB4A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AF1C78027DF7CA500DB4A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF1C78627E02E9C00DB4A27 /* Creatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creatures.swift; sourceTree = "<group>"; };
+		0AF1C7AA27E18A1000DB4A27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0AF1C7AC27E18E2A00DB4A27 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
+		0AF1C7AE27E18F3B00DB4A27 /* CreatureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,11 @@
 			children = (
 				0AF1C77227DF7CA400DB4A27 /* AppDelegate.swift */,
 				0AF1C77427DF7CA400DB4A27 /* SceneDelegate.swift */,
+				0AF1C7AC27E18E2A00DB4A27 /* Creature.swift */,
 				0AF1C78627E02E9C00DB4A27 /* Creatures.swift */,
+				0AF1C7AE27E18F3B00DB4A27 /* CreatureDetail.swift */,
 				0AF1C77627DF7CA400DB4A27 /* ListViewController.swift */,
+				0AF1C7AA27E18A1000DB4A27 /* DetailViewController.swift */,
 				0AF1C77827DF7CA400DB4A27 /* Main.storyboard */,
 				0AF1C77B27DF7CA500DB4A27 /* Assets.xcassets */,
 				0AF1C77D27DF7CA500DB4A27 /* LaunchScreen.storyboard */,
@@ -143,6 +152,9 @@
 			files = (
 				0AF1C78727E02E9C00DB4A27 /* Creatures.swift in Sources */,
 				0AF1C77727DF7CA400DB4A27 /* ListViewController.swift in Sources */,
+				0AF1C7AD27E18E2A00DB4A27 /* Creature.swift in Sources */,
+				0AF1C7AB27E18A1000DB4A27 /* DetailViewController.swift in Sources */,
+				0AF1C7AF27E18F3B00DB4A27 /* CreatureDetail.swift in Sources */,
 				0AF1C77327DF7CA400DB4A27 /* AppDelegate.swift in Sources */,
 				0AF1C77527DF7CA400DB4A27 /* SceneDelegate.swift in Sources */,
 			);
